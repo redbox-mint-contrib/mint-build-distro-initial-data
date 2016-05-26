@@ -23,7 +23,7 @@ stop_server() {
     ## Added a directory check since in fresh installs, this directory doesn't exist.
     if [ -d ${ADMIN_INSTALL_HOME} ]; then
       service mint stop
-      rm -Rf ${ADMIN_INSTALL_HOME}/storage
+      rm -Rf ${ADMIN_INSTALL_HOME}/storage/*
       rm -Rf ${ADMIN_INSTALL_HOME}/solr/indexes/fascinator/index
     fi
 }

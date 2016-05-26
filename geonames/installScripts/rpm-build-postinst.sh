@@ -32,7 +32,7 @@ start_server() {
     log_function $FUNCNAME
     cd ${ADMIN_INSTALL_HOME} || exit_install "failed to change to install directory."
     getServerArgs
-    service mint start
+    service mint restart
 }
 
 install_server
